@@ -1,0 +1,70 @@
+{
+  "name": "tdcx",
+  "version": "0.1.0",
+  "dependencies": {
+    "@ant-design/charts": "^1.2.14",
+    "@ant-design/icons": "4.4.0",
+    "@emotion/react": "11.1.4",
+    "@emotion/styled": "11.0.0",
+    "@sentry/react": "6.7.1",
+    "@sentry/tracing": "6.7.1",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "antd": "4.11.2",
+    "axios": "0.21.1",
+    "moment": "2.29.1",
+    "prop-types": "15.7.2",
+    "query-string": "6.13.8",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet-async": "1.0.7",
+    "react-query": "3.6.0",
+    "react-router-dom": "5.2.0",
+    "react-scripts": "4.0.1",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start": "craco start",
+    "start:https": "HTTPS=true craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
+  },
+  "devDependencies": {
+    "@craco/craco": "6.1.0",
+    "craco-antd": "1.19.0",
+    "gh-pages": "^3.2.3",
+    "husky": "4.3.8",
+    "lint-staged": "10.5.3",
+    "prettier": "2.2.1",
+    "pretty-quick": "3.1.0"
+  },
+  "cracoConfig": "config/craco.config.js"
+}
