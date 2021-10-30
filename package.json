@@ -1,4 +1,5 @@
 {
+  "homepage": "https://iKlaire.github.io/tdcx",
   "name": "tdcx",
   "version": "0.1.0",
   "dependencies": {
@@ -25,6 +26,8 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "craco start",
     "start:https": "HTTPS=true craco start",
     "build": "craco build",
