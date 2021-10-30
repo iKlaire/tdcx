@@ -68,7 +68,7 @@ const Main = () => {
           <Route path={pathsInExternalLayout}>
             <ExternalAppSwitch />
           </Route>
-          {/* <Redirect from="*" to={loginUri} /> */}
+          <Redirect from="*" to={loginUri} />
         </Switch>
       </AppContextProvider>
     </Router>

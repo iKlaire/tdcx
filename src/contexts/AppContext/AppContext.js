@@ -6,7 +6,7 @@ import { useHistory } from 'react-router';
 import { postLogin } from 'apis/auth';
 import { updateApiHeaders } from 'apis/apiHelper';
 
-import { buildLoginUri } from 'utils/routes';
+import { buildDashboardUri, buildLoginUri } from 'utils/routes';
 import { getIsUserLoggedIn, getUser, getAuthToken, setUserAuthObj, deleteUserAuthObj } from 'utils/auth';
 import { addUserContext as addErrAndPerfUserContext, removeUserContext as removeErrAndPerfUserContext } from 'utils/errorAndPerfLogging';
 
@@ -98,6 +98,7 @@ export const AppContextProvider = ({ children }) => {
       const storedUser = getUser();
       setUser(storedUser);
       setToken(storedToken);
+      history.push(buildDashboardUri());
 
       addErrAndPerfUserContext({ id: storedUser.id, username: storedUser.name });
     } else {
