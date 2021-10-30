@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Card } from 'antd';
 
 export const DashboardContainer = styled.div`
   border-radius: 8px;
@@ -30,4 +31,12 @@ export const ListItem = styled.li`
   color: ${props => props.theme.color.textColor};
   font-size: 16px;
   text-decoration: ${props => props.isCompleted && 'line-through'};
+`;
+
+export const NoTaskCard = styled(Card)`
+  border-radius: 8px;
+  margin: 50px auto ${props => props.theme.spacing.s} auto;
+  padding: ${props => props.theme.spacing.regular};
+  width: 280px;
+  text-align: center;
 `;
