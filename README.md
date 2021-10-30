@@ -1,7 +1,7 @@
 <div id="top"></div>
 <div align="center">
   <a href="https://github.com/iKlaire/tdcx">
-    <img src="images/profile.jpg" alt="Logo" width="80" height="80">
+    <img src="/images/profile.jpg" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">TDCX Assessment</h3>
@@ -139,6 +139,6 @@ Project Link: [https://github.com/iKlaire/tdcx](https://github.com/iKlaire/tdcx)
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/victoriatansf/
-[product-screenshot-login]: images/screenshot-login.jpg
-[product-screenshot-dashboard]: images/screenshot-dashboard.jpg
+[product-screenshot-login]: /images/screenshot-login.jpg
+[product-screenshot-dashboard]: /images/screenshot-dashboard.jpg
 [tdcx-logo-url]: https://www.contactcenterworld.com/company/tdcx.aspx
