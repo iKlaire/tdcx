@@ -46,11 +46,11 @@ This is a task manager system that is built according to the requirements of the
 
 #### Login Page
 
-[![Login Page Screen Shot][product-screenshot-login]
+![Login Page Screen Shot][product-screenshot-login]
 
 #### Dashboard Page
 
-[![Dashboard Page Screen Shot][product-screenshot-dashboard]
+![Dashboard Page Screen Shot][product-screenshot-dashboard]
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
