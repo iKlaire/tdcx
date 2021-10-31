@@ -58,7 +58,7 @@ const ExternalAppSwitch = () => {
 
 const Main = () => {
   return (
-    <Router>
+    <Router basename="/tdcx">
       <AppContextProvider>
         <Switch>
           <Redirect exact from="/" to={loginUri} />

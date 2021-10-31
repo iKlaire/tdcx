@@ -16,5 +16,10 @@ module.exports = {
         modules: [path.resolve(__dirname, 'src'), 'node_modules']
       }
     }
+  },
+  devServer: {
+    historyApiFallback: {
+      rewrites: [{ from: /\/tdcx\/[^?]/, to: '/404.html' }]
+    }
   }
 };
