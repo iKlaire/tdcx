@@ -2,15 +2,17 @@ import { render } from '@testing-library/react';
 import { AppContextProvider } from 'contexts/AppContext/AppContext';
 import Title from '../Title';
 
-describe('Title Component', () => {
-  it('rendered title', () => {
-    const { getByTestId } = render(
-      <AppContextProvider>
-        <Title />
-      </AppContextProvider>
-    );
-    const title = getByTestId('title');
+const MockTitle = ({ children }) => (
+  <AppContextProvider>
+    <Title>{children}</Title>
+  </AppContextProvider>
+);
 
-    expect(title).toBeTruthy();
+describe('Title Component', () => {
+  it('should render text correctly', () => {
+    const { getByText } = render(<MockTitle>My Title</MockTitle>);
+    const title = getByText('My Title');
+
+    expect(title).toBeInTheDocument();
   });
 });

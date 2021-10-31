@@ -13,11 +13,16 @@ const FormInput = ({ disabled, extraProps, label, name, placeholder, requiredErr
 };
 
 FormInput.propTypes = {
-  extraProps: PropTypes.object
+  name: PropTypes.oneOfType([PropTypes.string, PropTypes.array]).isRequired,
+  defaultValue: PropTypes.any,
+  extraRules: PropTypes.array,
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  requiredErrorMessage: PropTypes.string
 };
 
 FormInput.defaultProps = {
-  extraProps: {}
+  extraProps: {},
+  requiredErrorMessage: ''
 };
 
 export default FormInput;

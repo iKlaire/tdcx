@@ -1,7 +1,9 @@
 import React from 'react';
-import { message, Skeleton } from 'antd';
+import { message } from 'antd';
 import PropTypes from 'prop-types';
 import { Route, Redirect } from 'react-router-dom';
+
+import Skeleton from 'components/Skeleton/Skeleton';
 
 import { withAppContext } from 'contexts/AppContext/AppContext';
 import { buildLoginUri } from 'utils/routes';

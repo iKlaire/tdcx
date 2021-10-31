@@ -36,8 +36,8 @@ const TaskModal = ({ defaultValue, visible, onClose, onSubmitted }) => {
   };
 
   return (
-    <Modal visible={visible} footer={null} width={300} onCancel={onClose} destroyOnClose>
-      <Form form={form} initialValues={defaultValue} onFinish={handleOnFormFinish} preserve={false}>
+    <Modal visible={visible} footer={null} width={300} onCancel={onClose} destroyOnClose data-testid="taskModal">
+      <Form form={form} initialValues={defaultValue} onFinish={handleOnFormFinish} preserve={false} data-testid="form">
         <Title marginBottom="12px">{text}</Title>
         <FormInput name="name" placeholder="Task Name" requiredErrorMessage="Please enter the name of the task." />
         <SubmitButton type="primary" htmlType="submit">

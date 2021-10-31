@@ -35,7 +35,7 @@ const Login = ({ onLogin }) => {
   };
 
   return (
-    <LoginContainer>
+    <LoginContainer data-testid="login">
       <Form form={form} onFinish={handleOnLogin}>
         <Title marginBottom={12}>Login</Title>
         <FormInput name="apiKey" type="password" placeholder="Id" requiredErrorMessage="Id is required to login." />
