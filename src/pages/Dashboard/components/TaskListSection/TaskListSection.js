@@ -1,11 +1,11 @@
 import React, { useMemo, useState } from 'react';
-import { Checkbox, Col, List, message, Modal, Row, Skeleton } from 'antd';
+import { Checkbox, Col, List, message, Modal, Row } from 'antd';
 import { EditOutlined, DeleteOutlined, SearchOutlined } from '@ant-design/icons';
 
 import { useGetTasks, updateTask, deleteTask } from 'apis/task';
 
-import Title from 'components/Title/Title';
 import Card from 'components/Card/Card';
+import Title from 'components/Title/Title';
 import TaskModal from '../TaskModal/TaskModal';
 
 import { AddTaskButton, HeaderRow, ItemTitleText, ListItemMeta, SearchInput } from './TaskListSection.styles';
@@ -112,12 +112,10 @@ const TaskList = ({ onAddNewTaskButtonClick, onUpdated }) => {
           dataSource={filteredTaskList}
           renderItem={item => (
             <List.Item actions={getListItemActions(item, openTaskModal, onUpdated)}>
-              <Skeleton avatar title={false} loading={isTasksLoading} active>
-                <ListItemMeta
-                  avatar={<Checkbox defaultChecked={item.completed} onChange={handleOnCheckChange(item._id)} />}
-                  title={<ItemTitleText isCompleted={item.completed}>{item.name}</ItemTitleText>}
-                />
-              </Skeleton>
+              <ListItemMeta
+                avatar={<Checkbox defaultChecked={item.completed} onChange={handleOnCheckChange(item._id)} />}
+                title={<ItemTitleText isCompleted={item.completed}>{item.name}</ItemTitleText>}
+              />
             </List.Item>
           )}
         />
