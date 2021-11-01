@@ -64,23 +64,21 @@ export const AppContextProvider = ({ children }) => {
   const isLoggedIn = !!user && !!user.name;
 
   const onLogin = ({ apiKey, name }) => {
-    return postLogin(apiKey, name)
-      .then(res => {
-        const userData = {
-          token: res.token.token,
-          user: {
-            id: apiKey,
-            name: res.token.name,
-            image: res.image
-          }
-        };
-        setUserAuthObj(userData);
-        updateApiHeaders(); // update API header ASAP to ensure subsequent API call is updated
-        setUser(userData.user);
-        addErrAndPerfUserContext({ id: apiKey, username: name });
-        return userData;
-      })
-      .catch(ex => message.error(ex));
+    return postLogin(apiKey, name).then(res => {
+      const userData = {
+        token: res.token.token,
+        user: {
+          id: apiKey,
+          name: res.token.name,
+          image: res.image
+        }
+      };
+      setUserAuthObj(userData);
+      updateApiHeaders(); // update API header ASAP to ensure subsequent API call is updated
+      setUser(userData.user);
+      addErrAndPerfUserContext({ id: apiKey, username: name });
+      return userData;
+    });
   };
 
   const onLogout = useCallback(() => {

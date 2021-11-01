@@ -31,14 +31,8 @@ const api = axios.create({
 
 // TODO: Might need apiErrorHandlerWithRedirect but since we have react-query we might do that there
 const apiErrorHandler = e => {
-  if (e.response && e.response.data) {
-    if (e.response.data.code) {
-      throw e.response.data;
-    } else if (e.response.data.message) {
-      throw new Error(e.response.data.message);
-    } else {
-      throw new Error(e.response.data);
-    }
+  if (e.response) {
+    throw e.response;
   } else if (e.message) {
     if (e.message === AXIOS_GENERIC_NETWORK_ERROR_MSG) {
       e.message = `${e.message}. Please check your internet connection.`;

@@ -9,7 +9,7 @@ const Header = ({ onLogout, user }) => {
   return (
     <HeaderRow justify="space-between">
       <Col>
-        <Avatar src={user.image} size="large" style={{ marginRight: 8, border: 1 }} />
+        <Avatar src={'images/profile.jpg'} size="large" style={{ marginRight: 8, border: 1 }} /> {/* TODO: change src to user.image */}
         <span>{user.name}</span>
       </Col>
       <Col>

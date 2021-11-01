@@ -27,7 +27,13 @@ const Login = ({ onLogin }) => {
         history.push(buildDashboardUri());
       })
       .catch(ex => {
-        message.error(`Login failed: ${ex}`);
+        if (ex.status === 400) {
+          message.error('Please fill in both Id and name to login');
+        } else if (ex.status === 401) {
+          message.error('Id not found. Please key in the correct Id.');
+        } else {
+          message.error(`Login failed: ${ex}`);
+        }
       })
       .finally(() => {
         setIsLoading(false);
